@@ -8,10 +8,15 @@ class Terminalmarket < Formula
   depends_on "node"
 
   def install
-    system "npm", "install", "-g", *std_npm_install_args
+    # Install npm dependencies locally into the Cellar
+    system "npm", "install", "--production", "--prefix", libexec, "."
+
+    # Expose the CLI executable
+    bin.install_symlink libexec/"bin/tm"
   end
 
   test do
-    system "#{bin}/tm", "--help"
+    system "#{bin}/tm", "help"
   end
 end
+
