@@ -2,8 +2,7 @@ class Terminalmarket < Formula
   desc "Curated marketplace CLI for developers and founders"
   homepage "https://github.com/infoindustry/terminalmarket-cli"
   url "https://github.com/infoindustry/terminalmarket-cli/archive/refs/tags/v0.11.2.tar.gz"
-  # sha256 will need to be updated after creating the v0.11.2 tag
-  sha256 ""
+  sha256 "981c921296ddb6662a8fe3a4904b04d2f98dfdef4d117b32120b8f9a5a0c4da3"
   license "MIT"
 
   depends_on "node"
